@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kanghao Lin | Computer Science</title>
+  <link rel="stylesheet" href="style.css"/>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  
+
+  <header>
+    <button class="toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+    <span class="icon-dark">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+      <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/>
+      </svg>
+    </span>
+    <span class="icon-light">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+      <path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/>
+    </svg>
+    </span>
+  </button>
+    <div class="profile-header">
+      <div class="header-info">
+        <h1>KangHao Lin</h1>
+        <p>Computer Science | University at Buffalo, Class of 2025</p>
+        <div class="social-links">
+          <a href="mailto:2002qwerdf@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/kanghaolin/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="resume.pdf" download title="Download Resume" class="resume-btn"><i class="fas fa-file-download"></i> Resume</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="section">
+      <h2>Education</h2>
+      <p><strong>University at Buffalo, SUNY</strong> — B.S. in Computer Science<br />
+      <em> May 2025 | GPA: 3.84</em></p>
+      <p><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Web Development, Computer Networks, Machine Learning, Artificial Intelligence</p>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <h3>Project Manager – Coder-Focused Message Board</h3>
+      <p><em>University at Buffalo – Software Engineering Project</em></p>
+      <ul>
+        <li>Designed and developed a scalable message board with public/private communities</li>
+        <li>Led Agile sprints using Trello, collaborating with cross-functional teams</li>
+        <li>Implemented post ranking, voting, and secure authentication features</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Projects</h2>
+      <h3>Movie Recommender System</h3>
+      <ul>
+        <li>Built a content-based recommender using TF-IDF and cosine similarity</li>
+        <li>Processed metadata (genres, cast, keywords) and integrated with MongoDB</li>
+      </ul>
+
+      <h3>Schedule-Sync</h3>
+      <ul>
+        <li>Client-centric scheduling platform with secure token authentication</li>
+        <li>Used bcrypt, CSRF protection, and parameterized SQL queries</li>
+      </ul>
+
+      <h3>Dynamic Blog Platform</h3>
+      <ul>
+        <li>Developed a responsive, RESTful blog with Dockerized deployment</li>
+        <li>Improved latency via Nginx load balancing and HTTPS encryption</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Technical Skills</h2>
+      <p>
+        <strong>Programming Languages:</strong>
+        <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C</span>
+        <span class="tag">Scala</span><span class="tag">JavaScript</span><span class="tag">HTML/CSS</span><span class="tag">PHP</span><br/>
+        <strong>Databases:</strong>
+        <span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">phpMyAdmin</span><br/>
+        <strong>Frameworks:</strong>
+        <span class="tag">Flask</span><span class="tag">PyTorch</span><span class="tag">React</span><br/>
+        <strong>Tools:</strong>
+        <span class="tag">Docker</span><span class="tag">Apache</span><span class="tag">Nginx</span><span class="tag">Git</span>
+        <span class="tag">IntelliJ</span><span class="tag">VS Code</span><br/>
+        <strong>Languages Spoken:</strong> English, Mandarin Chinese
+      </p>
+    </div>
+    
+    <!-- Timeline in reversed order -->
+    <div class="section">
+      <h2>Computer Science Course Timeline</h2>
+
+      <div class="timeline-item">
+        <h3>Spring 2025</h3>
+        <ul>
+          <li><strong>CSE 404 - Software Project Management:</strong> Software lifecycle planning, scheduling, resource management, and team communication.</li>
+          <li><strong>CSE 411 - Introduction to CS Administration:</strong> Linux system admin, user management, file systems, shell scripting, and automation tools.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Fall 2024</h3>
+        <ul>
+          <li><strong>CSE 368 - Artificial Intelligence:</strong> Search strategies, logic and planning, knowledge representation, and basic ML techniques.</li>
+          <li><strong>CSE 474 - Introduction to Machine Learning:</strong> Supervised learning, model evaluation, regression, classification, and clustering.</li>
+          <li><strong>CSE 489 - Modern Network Concepts:</strong> TCP/IP, routing, switching, network security, and performance optimization.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Spring 2024</h3>
+        <ul>
+          <li><strong>CSE 312 - Web Applications:</strong> Full-stack development with Flask, HTTP, JavaScript, backend security, and session handling.</li>
+          <li><strong>CSE 429 - Algorithms for Modern Computing Systems:</strong> Algorithms for parallel, distributed, and high-performance computing.</li>
+          <li><strong>CSE 442 - Software Engineering Concepts:</strong> Agile practices, team collaboration, design patterns, Git workflows, and testing.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Fall 2023</h3>
+        <ul>
+          <li><strong>CSE 331 - Algorithms and Complexity:</strong> Algorithm design and analysis, including sorting, searching, dynamic programming, and graph traversal.</li>
+          <li><strong>CSE 341 - Computer Organization:</strong> Assembly language, digital logic, memory architecture, CPU design, and instruction sets.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Spring 2023</h3>
+        <ul>
+          <li><strong>CSE 220 - Systems Programming:</strong> Memory management, C programming, processes, and Unix shell scripting.</li>
+          <li><strong>CSE 250 - Data Structures:</strong> Lists, trees, heaps, stacks, queues, hash tables, and performance analysis.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Fall 2022</h3>
+        <ul>
+          <li><strong>CSE 116 - Computer Science II:</strong> Data abstraction, recursion, inheritance, and basic data structures.</li>
+          <li><strong>CSE 191 - Introduction to Discrete Structures:</strong> Logic, sets, relations, graphs, proofs, and combinatorics.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Spring 2022</h3>
+        <ul>
+          <li><strong>CSE 115 - Computer Science I:</strong> Intro to problem-solving, basic algorithms, and OOP in Java.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ScrollReveal.js for scroll animations -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- THEME TOGGLE -->
+  <script src="script.js"></script>
+</body>
+</html>
