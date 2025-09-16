@@ -11,23 +11,21 @@
   display: none;
 }
 
-[data-theme='dark'] .toggle-btn .icon-dark {
+[data-theme="dark"] .toggle-btn .icon-dark {
   display: none;
 }
 
-[data-theme='dark'] .toggle-btn .icon-light {
+[data-theme="dark"] .toggle-btn .icon-light {
   display: inline;
 }
 
 .toggle-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  /* positioned in-flow inside .header-right so spacing is controlled by flex gap */
   background: var(--tag);
   border: none;
-  padding: 0;             
-  border-radius: 50%;     
-  width: 44px;            
+  padding: 0;
+  border-radius: 50%;
+  width: 44px;
   height: 44px;
   cursor: pointer;
   font-size: 1.5rem;
@@ -49,7 +47,7 @@
   --accent-light: #007acc;
   --card-light: #ffffff;
   --tag-light: #e0e0e0;
-
+  --black-border: #160000;
   --bg-dark: #121212;
   --text-dark: #e0e0e0;
   --accent-dark: #90caf9;
@@ -57,7 +55,7 @@
   --tag-dark: #2a2a2a;
 }
 
-[data-theme='light'] {
+[data-theme="light"] {
   --bg: var(--bg-light);
   --text: var(--text-light);
   --accent: var(--accent-light);
@@ -65,7 +63,7 @@
   --tag: var(--tag-light);
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --bg: var(--bg-dark);
   --text: var(--text-dark);
   --accent: var(--accent-dark);
@@ -92,6 +90,55 @@ header {
   padding: 40px 20px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-bottom: 1px solid var(--accent-light);
+}
+
+.site-head-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 6rem;
+}
+
+.header-info {
+  order: 1;
+  padding: 0 8px;
+  text-align: center; /* center text inside the header-info block */
+}
+
+.light-dark-mode-toggle-container {
+  padding-left: 20px;
+  order: 3;
+}
+
+.social-links {
+  order: 2;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.header-right {
+  order: 2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-left: 50rem;
+}
+
+.header-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  order: 1;
 }
 
 header h1 {
@@ -134,10 +181,6 @@ h2 {
   color: var(--accent);
 }
 
-ul {
-  padding-left: 20px;
-}
-
 .tag {
   display: inline-block;
   background: var(--tag);
@@ -148,12 +191,8 @@ ul {
 }
 
 .toggle-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
   background: var(--tag);
   border: none;
-  padding: 8px 12px;
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.9rem;
@@ -173,58 +212,18 @@ ul {
   border-left: 4px solid var(--accent);
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  opacity: 1; 
+  opacity: 1;
   transform: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.collapse-btn {
-  background: var(--tag);
-  color: var(--text);
-  border: none;
-  padding: 10px 15px;
-  width: 100%;
-  text-align: left;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.collapse-btn:hover {
-  background: var(--accent);
-  color: #fff;
-}
-
-.collapse-content {
-  display: none;
-  padding: 10px 20px;
-  background: var(--card);
-  border-left: 4px solid var(--accent);
-  margin-top: 5px;
-  border-radius: 5px;
-}
-
-
-.social-links {
-  display: flex;
-  gap: 30px;  
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-
 .social-links a {
-  color: inherit; 
+  color: inherit;
   font-size: 1.5rem;
   text-decoration: none;
-  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
-
 
 .social-links a[title="Email"] {
   color: #d14836;
@@ -234,12 +233,18 @@ ul {
   color: #0a66c2;
 }
 
+.resume {
+  grid-column-start: 1;
+}
+
+li {
+  list-style: none;
+}
 .social-links a.resume-btn {
-  color: #28a745;
+  color: #286ea7;
   font-size: 1.25rem;
   font-weight: 600;
 }
-
 
 @media (max-width: 600px) {
   header h1 {
@@ -249,9 +254,19 @@ ul {
   .section {
     padding: 20px;
   }
-
-  .toggle-btn {
-    top: 10px;
-    right: 10px;
+  /* On small screens, stack header elements to prevent overlap */
+  .site-head-container {
+    height: auto;
+    padding: 20px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .social-links,
+  .light-dark-mode-toggle-container,
+  .header-right {
+    position: static;
+    transform: none;
+    margin-top: 10px;
   }
 }
