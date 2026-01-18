@@ -212,10 +212,11 @@ h2 {
 
 .typewriter-text{
     font-size: 2.5rem;
-    color: #000000;
+    color: white;
     white-space: nowrap;
     font-family: "Microsoft YaHei", "Noto Sans SC", sans-serif;
     text-decoration: none;
+    mix-blend-mode: difference;
 }
 
 .typewriter-text::after{
